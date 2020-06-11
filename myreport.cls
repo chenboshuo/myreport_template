@@ -471,7 +471,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %\newlength\figurewidth
 
 % 设置参考文献格式
-\bibliographystyle{plain}
+% \bibliographystyle{plain}
+\RequirePackage{gbt7714}
 
 % 优化大于等于和小于等于
 \renewcommand{\le}{\leqslant}
