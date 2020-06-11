@@ -334,22 +334,35 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 目录深度
 \setcounter{secnumdepth}{3}
 % 节标题格式, 居中, 使用\chinese命令修改计数器
-% \def\@seccntformat#1{\csname the#1\endcsname\ }
-% \renewcommand\thesection{\chinese{section}、}
-% \renewcommand\thesubsection{\arabic{section}\thinspace.\thinspace\arabic{subsection}}
-% \renewcommand\thesubsubsection{\thesubsection\thinspace.\thinspace\arabic{subsubsection}}
-% \renewcommand\section{\@startsection{section}{1}{\z@}%
-%  	{-3.5ex \@plus -1ex \@minus -.2ex}%
-% 	{2.3ex \@plus.2ex}%
-% 	{\centering\normalfont\Large\bfseries}}
-% \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-% 	{-3.25ex\@plus -1ex \@minus -.2ex}%
-% 	{1.5ex \@plus .2ex}%
-% 	{\normalfont\large\bfseries}}
+\def\@seccntformat#1{\csname the#1\endcsname\ }
+% 一、section
+\renewcommand\thesection{\chinese{section}、}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+ 	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus.2ex}%
+	{\centering\normalfont\Large\bfseries}}
+% 1. 1 subsection
+\renewcommand\thesubsection{\arabic{section}\thinspace.\thinspace\arabic{subsection}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\large\bfseries}}
+
+% 1. 1 .1 subsubsection
+\renewcommand\thesubsubsection{\thesubsection\thinspace.\thinspace\arabic{subsubsection}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\normalsize\bfseries}}
+
+% % 1. subsubsection
+% \renewcommand\thesubsubsection{\arabic{subsubsection}.}
 % \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
 % 	{-3.25ex\@plus -1ex \@minus -.2ex}%
 % 	{1.5ex \@plus .2ex}%
 % 	{\normalfont\normalsize\bfseries}}
+
+
 % \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
 % 	{3.25ex \@plus1ex \@minus.2ex}%
 % 	{-1em}%
