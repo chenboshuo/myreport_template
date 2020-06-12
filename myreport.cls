@@ -496,4 +496,12 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \RequirePackage{clrscode}
 \RequirePackage{clrscode3e}
 
+% 页眉含有章节标题
+\RequirePackage{fancyhdr}
+\fancyhead{} % Clear the headers
+\renewcommand{\headrulewidth}{0pt} % Width of line at top of page
+\fancyhead[L]{\slshape\leftmark} % Mark right [R] of page with Chapter name [\leftmark]
+
+\pagestyle{fancy} % Set default style for all content pages (not TOC, etc)
+
 \endinput
