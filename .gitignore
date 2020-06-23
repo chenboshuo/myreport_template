@@ -11,7 +11,7 @@
 *.xdv
 *.xcp
 
-tmp-pdfcrop-13964.tex
+**/sections/*.pdf
 
 # vscode
 .vscode
