@@ -501,7 +501,17 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \fancyhead{} % Clear the headers
 \renewcommand{\headrulewidth}{0pt} % Width of line at top of page
 \fancyhead[L]{\slshape\leftmark} % Mark right [R] of page with Chapter name [\leftmark]
-
 \pagestyle{fancy} % Set default style for all content pages (not TOC, etc)
+
+% % 防止目录重叠 https://www.latexstudio.net/archives/7986.html
+% \makeatletter
+% \renewcommand{\numberline}[1]{%
+% \settowidth\@tempdimb{#1\hspace{0.15em}}%
+% \ifdim\@tempdima<\@tempdimb%
+% \@tempdima=\@tempdimb%
+% \fi%
+% \hb@xt@\@tempdima{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
+% \makeatother
+
 
 \endinput
