@@ -71,9 +71,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{subcaption}
 \RequirePackage[titles]{tocloft}
 
-% 子文件
-\RequirePackage{subfiles}
-
 % 物理单位
 \RequirePackage{siunitx}
 
