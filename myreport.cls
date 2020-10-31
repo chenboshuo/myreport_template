@@ -577,4 +577,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \crefrangeformat{algorithm}{算法(#3#1#4)\;\~{}\;(#5#2#6)}
 \crefmultiformat{algorithm}{算法~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
 
+% <- 的定义
+\DeclareMathSymbol{\leftarrow}{\mathrel}{symbols}{"20}
+\let\gets=\leftarrow
+
 \endinput
