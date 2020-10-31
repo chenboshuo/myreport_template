@@ -492,6 +492,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{algorithm}
 % \RequirePackage{clrscode}
 \RequirePackage{clrscode3e}
+\floatname{algorithm}{算法}
 
 % 页眉含有章节标题
 \RequirePackage{fancyhdr}
@@ -510,5 +511,70 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \hb@xt@\@tempdima{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
 % \makeatother
 
+
+%% crefformat settings
+\crefformat{figure}{#2图~#1#3}
+\crefrangeformat{figure}{图~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{figure}{图~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
+
+\crefformat{table}{#2表#1#3}
+\crefrangeformat{table}{表(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{table}{表~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
+
+\crefformat{equation}{#2公式(#1#3)}
+\crefrangeformat{equation}{公式(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{equation}{公式(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{definition}{#2\mcm@cap@definition~#1#3}
+\crefrangeformat{definition}{\mcm@cap@definition~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{definition}{\mcm@cap@definition~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{theorem}{#2\mcm@cap@theorem~#1#3}
+\crefrangeformat{theorem}{\mcm@cap@theorem~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{theorem}{\mcm@cap@theorem~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{lemma}{#2\mcm@cap@lemma~#1#3}
+\crefrangeformat{lemma}{\mcm@cap@lemma~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{lemma}{\mcm@cap@lemma~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{corollary}{#2\mcm@cap@corollary~#1#3}
+\crefrangeformat{corollary}{\mcm@cap@corollary~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{corollary}{\mcm@cap@corollary~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{assumption}{#2\mcm@cap@assumption~#1#3}
+\crefrangeformat{assumption}{\mcm@cap@assumption~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{assumption}{\mcm@cap@assumption~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{conjecture}{#2\mcm@cap@conjecture~#1#3}
+\crefrangeformat{conjecture}{\mcm@cap@conjecture~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{conjecture}{\mcm@cap@conjecture~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{axiom}{#2\mcm@cap@axiom~#1#3}
+\crefrangeformat{axiom}{\mcm@cap@axiom~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{axiom}{\mcm@cap@axiom~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{principle}{#2\mcm@cap@principle~#1#3}
+\crefrangeformat{principle}{\mcm@cap@principle~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{principle}{\mcm@cap@principle~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{problem}{#2\mcm@cap@problem~#1#3}
+\crefrangeformat{problem}{\mcm@cap@problem~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{problem}{\mcm@cap@problem~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{example}{#2\mcm@cap@example~#1#3}
+\crefrangeformat{example}{\mcm@cap@example~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{example}{\mcm@cap@example~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{proof}{#2\mcm@cap@proof~#1#3}
+\crefrangeformat{proof}{\mcm@cap@proof~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{proof}{\mcm@cap@proof~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{solution}{#2\mcm@cap@solution~#1#3}
+\crefrangeformat{solution}{\mcm@cap@solution~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{solution}{\mcm@cap@solution~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{algorithm}{#2算法#1#3}
+\crefrangeformat{algorithm}{算法(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{algorithm}{算法~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
 
 \endinput
