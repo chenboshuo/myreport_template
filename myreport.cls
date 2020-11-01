@@ -68,8 +68,10 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{tikz}
 
 % 字图与子标题
-\RequirePackage{subcaption}
+% \RequirePackage{subcaption}
 \RequirePackage[titles]{tocloft}
+\RequirePackage{subfig}
+% usage https://tex.stackexchange.com/questions/111822/using-subfloat-to-place-figures-side-by-side
 
 % 物理单位
 \RequirePackage{siunitx}
