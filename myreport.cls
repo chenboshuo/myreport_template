@@ -496,7 +496,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \RequirePackage{clrscode}
 \RequirePackage{clrscode3e}
 \floatname{algorithm}{算法}
-\renewcommand{\Comment}[1][1]{$\hspace*{#1em}\rhd$ }
+\renewcommand{\Comment}[1][2]{$\hspace*{#1em}\rhd$ }
 
 % 页眉含有章节标题
 \RequirePackage{fancyhdr}
