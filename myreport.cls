@@ -39,6 +39,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{bm}
+\RequirePackage{mathtools}
 %\RequirePackage{titletoc}
 % 设置颜色
 \RequirePackage{xcolor}
