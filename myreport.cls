@@ -116,7 +116,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   rulecolor=\color{gray!35},
   backgroundcolor=\color{gray!5},
   basicstyle={\small\ttfamily},
-  numbers=none,
+  numbers=left,
   numberstyle=\tiny\color{gray},
   keywordstyle=\color{blue},
   commentstyle=\color{dkgreen},
