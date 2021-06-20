@@ -146,7 +146,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     \addcontentsline{toc}{section}{\refname}
     }
 % 超链接 hyperref 的设置
-\RequirePackage{hyperref}
+\RequirePackage[pdfusetitle]{hyperref}
 % 智能自动化交叉引用
 \RequirePackage{cleveref}
 %% Document Layout
