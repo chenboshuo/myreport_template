@@ -22,7 +22,7 @@ build/%.pdf: %.tex build
 inkscape:
 	cd figures
 	for i in $$(find . -type f -name '*.svg');do
-		inkscape $$i --export-filename=$$(basename $$i .svg ).pdf \
+		inkscape $$i --export-filename=_$$(basename $$i .svg ).pdf \
 		  --export-latex --export-area-drawing
 	done
 
