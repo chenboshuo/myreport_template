@@ -411,7 +411,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	 \parsep \z@ \@plus\p@}%
 	\item\relax}
 	{\endlist}
-
+%
 \newcommand\keywords[1]{%
 	\renewcommand{\myreport@tokens@keywords}{#1}
 	\par
@@ -660,5 +660,25 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   }%
 }
 \renewcommand{\glossarysection}[2][]{}
+
+% abstract
+\RequirePackage[main=pinyin,english]{babel}
+\addto\captionspinyin{
+	\renewcommand\keywords[1]{%
+		% \par
+		\vskip1ex
+		{\noindent\zihao{-4}\heiti 关键字：}~{#1}
+	}
+}
+\addto\captionsenglish{
+	\renewcommand\keywords[1]{%
+		% \par
+		\vskip1ex
+		\textbf{Keywords}:  #1
+	}
+}
+
+% \MyTitle
+\RequirePackage{authoraftertitle}
 
 \endinput
