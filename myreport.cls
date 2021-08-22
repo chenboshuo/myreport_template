@@ -335,32 +335,49 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \setcounter{secnumdepth}{3}
 % 节标题格式, 居中, 使用\chinese命令修改计数器
 \def\@seccntformat#1{\csname the#1\endcsname\ }
+
 % 一、section
-\renewcommand\thesection{\chinese{section}、}
-\renewcommand\section{\@startsection{section}{1}{\z@}%
- 	{-3.5ex \@plus -1ex \@minus -.2ex}%
-	{2.3ex \@plus.2ex}%
-	{\centering\normalfont\Large\bfseries}}
-% 1. 1 subsection
-\renewcommand\thesubsection{\arabic{section}\thinspace.\thinspace\arabic{subsection}}
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-	{-3.25ex\@plus -1ex \@minus -.2ex}%
-	{1.5ex \@plus .2ex}%
-	{\normalfont\large\bfseries}}
+\newcommand{\cheineseCenterSection}{
+  \renewcommand\thesection{\chinese{section}、}
+  \renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\centering\normalfont\Large\bfseries}}
 
-% 1. 1 .1 subsubsection
-\renewcommand\thesubsubsection{\thesubsection\thinspace.\thinspace\arabic{subsubsection}}
-\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-	{-3.25ex\@plus -1ex \@minus -.2ex}%
-	{1.5ex \@plus .2ex}%
-	{\normalfont\normalsize\bfseries}}
+  % 1. 1 subsection
+  \renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+  \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  	{-3.25ex\@plus -1ex \@minus -.2ex}%
+  	{1.5ex \@plus .2ex}%
+  	{\normalfont\large\bfseries}}
+}
 
-% % 1. subsubsection
-% \renewcommand\thesubsubsection{\arabic{subsubsection}.}
-% \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-% 	{-3.25ex\@plus -1ex \@minus -.2ex}%
-% 	{1.5ex \@plus .2ex}%
-% 	{\normalfont\normalsize\bfseries}}
+% (一) subsection
+\newcommand{\chineseSubsection}{
+  \renewcommand\thesubsection{(\chinese{subsection})\thinspace}
+  \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\large\bfseries}}
+  % 1. 1 .1 subsubsection
+  \renewcommand\thesubsubsection{%
+    \arabic{section}.\arabic{subsection}.\arabic{subsubsection}%
+  }
+  \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+}
+
+
+% 1. subsubsection
+\newcommand{\singleArabicSubsubsection}{
+  \renewcommand\thesubsubsection{\arabic{subsubsection}.}
+  \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+}
 
 
 % \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
@@ -484,7 +501,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %\newlength\figurewidth
 
 % 设置参考文献格式
-\bibliographystyle{plain}
+% \bibliographystyle{plain}
 % \RequirePackage{gbt7714}
 
 % 优化大于等于和小于等于

@@ -4,17 +4,45 @@
 \author{陈伯硕}
 \date{\today}
 
+% 中文文献格式
+%  需要安装   https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style
+% \usepackage{gbt7714}
+
 \usepackage{subfiles}
 \begin{document}
+
+\pagenumbering{roman}
+% \listoftodos
 \maketitle
 
 % Generate the Table of Contents if it's needed.
-\tableofcontents
+\begin{center}
+	\tableofcontents
+\end{center}
 \newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
 
 \section{section}
 \subsection{subsection}
 \subsubsection{subsubsection}
+
+\cheineseCenterSection
+\section{中文居中标题}
+	调用命令\func{\textbackslash cheineseCenterSection}即可
+	\subsection{此时二级标题不变}
+		\subsubsection{三级标题也不变}
+
+\section{中文居中标题}
+		\chineseSubsection
+		\subsection{加括号的中文数字做二级标题}
+			调用命令\func{\textbackslash chineseSubsection}即可
+			\subsubsection{三级标题不变}
+
+		\singleArabicSubsubsection
+		\subsubsection{单一数字的三级标题}
+			调用命令\func{\textbackslash singleArabicSubsubsection}即可
+
 
 \section{符号表}
 
