@@ -1,19 +1,18 @@
-\documentclass[pdfCover]{myreport} % 需要pdf封面
-% \documentclass{myreport}
+% \documentclass[pdfCover]{myreport} % 需要pdf封面
+\documentclass{myreport}
 \title{测试myreport}
 \author{陈伯硕}
 \date{\today}
 
-% 中文文献格式
-%  需要安装   https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style
-% \usepackage{gbt7714}
+\def\MyProject{本科学年设计}
 
 \usepackage{subfiles}
 \begin{document}
 
 \pagenumbering{roman}
 % \listoftodos
-\maketitle
+% \maketitle
+\subfile{sections/cover}
 
 % Generate the Table of Contents if it's needed.
 \begin{center}
@@ -25,7 +24,7 @@
 
 \selectlanguage{pinyin}
 \begin{abstract}
-  中文摘要
+  中文摘要\MyTitle
 	\keywords{中文关键词1 \qquad 中文关键词2}
 \end{abstract}
 

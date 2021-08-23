@@ -681,4 +681,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \MyTitle
 \RequirePackage{authoraftertitle}
 
+
+
 \endinput
