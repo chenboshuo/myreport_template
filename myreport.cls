@@ -681,6 +681,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \MyTitle
 \RequirePackage{authoraftertitle}
 
-
+% 文件树（|- 等tree命令生成符号）
+\RequirePackage{ifplatform}
+\ifwindows
+\else
+  \setmonofont{DejaVu Sans Mono}
+\fi
 
 \endinput
