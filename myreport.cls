@@ -337,7 +337,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \def\@seccntformat#1{\csname the#1\endcsname\ }
 
 % 一、section
-\newcommand{\cheineseCenterSection}{
+\newcommand{\chineseCenterSection}{
   \renewcommand\thesection{\chinese{section}、}
   \renewcommand\section{\@startsection{section}{1}{\z@}%
   {-3.5ex \@plus -1ex \@minus -.2ex}%
