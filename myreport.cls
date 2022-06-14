@@ -669,6 +669,13 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 		\vskip1ex
 		{\noindent\zihao{-4}\heiti 关键字：}~{#1}
 	}
+  \renewcommand{\refname}{参考文献}
+  \renewcommand{\figurename}{图}
+  \renewcommand{\tablename}{表}
+  \renewcommand\appendixname{附录}
+  \renewcommand{\contentsname}{目录}
+  \renewcommand\appendixtocname{附录}
+  \renewcommand{\abstractname}{摘要}
 }
 \addto\captionsenglish{
 	\renewcommand\keywords[1]{%
